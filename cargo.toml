@@ -1,0 +1,11 @@
+[package]
+name = "bevy_refresher"
+version = "0.1.0"
+authors = ["sanisoclem <me@jerahmeelcosinas.net>"]
+edition = "2021"
+
+[dependencies]
+bevy = { git = "https://github.com/bevyengine/bevy", rev = "95bc99fd" }
+
+[profile.dev.package."*"]
+opt-level = 3
