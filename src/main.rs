@@ -1,6 +1,8 @@
 use bevy::prelude::*;
 
 
+mod audio;
+
 fn main() {
     App::new()
         .insert_resource(WindowDescriptor {
@@ -10,6 +12,7 @@ fn main() {
             ..Default::default()
         })
         .add_plugins(DefaultPlugins)
+        .add_plugin(audio::AudioPlugin)
         .add_startup_system(setup)
         .add_system(animate_sprite)
         .run();
